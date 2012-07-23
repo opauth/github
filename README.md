@@ -6,6 +6,8 @@ Implemented based on http://developer.github.com/v3/oauth/ using OAuth2.
 
 Opauth is a multi-provider authentication framework for PHP.
 
+Demo: http://opauth.org/#github
+
 Getting started
 ----------------
 1. Install Opauth-GitHub:
