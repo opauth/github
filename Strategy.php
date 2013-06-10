@@ -13,9 +13,6 @@
 namespace Opauth\Strategy\Github;
 
 use Opauth\AbstractStrategy;
-use Opauth\HttpClient;
-use Opauth\Request;
-use Opauth\Response;
 
 /**
  * GitHub strategy for Opauth
@@ -59,7 +56,7 @@ class Strategy extends AbstractStrategy {
 		);
 		$params = $this->addParams($this->optionals, $params);
 
-		HttpClient::redirect($url, $params);
+		$this->http->redirect($url, $params);
 	}
 
 	/**
@@ -81,7 +78,7 @@ class Strategy extends AbstractStrategy {
 		}
 
 		$data = array('access_token' => $results['access_token']);
-		$user = HttpClient::get('https://api.github.com/user', $data);
+		$user = $this->http->get('https://api.github.com/user', $data);
 		$user = $this->recursiveGetObjectVars(json_decode($user));
 		if (empty($user) || isset($user['message'])) {
 			$error = array(
@@ -109,7 +106,7 @@ class Strategy extends AbstractStrategy {
 		);
 		$params = $this->addParams($this->optionals, $params);
 
-		return HttpClient::post($url, $params);
+		return $this->http->post($url, $params);
 	}
 
 }
