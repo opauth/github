@@ -18,8 +18,8 @@ Getting started
 
 2. Register a GitHub application at https://github.com/settings/applications/new
    - Enter URL as your application URL (this can be outside of Opauth)
-   - Callback URL: enter `http://path_to_opauth/github/oauth2callback`
-   
+   - Callback URL: enter `http://path_to_opauth/github/callback`
+
 3. Configure Opauth-GitHub strategy with `client_id` and `client_secret`.
 
 4. Direct user to `http://path_to_opauth/github` to authenticate
@@ -43,7 +43,7 @@ Optional parameters:
 
 License
 ---------
-Opauth-GitHub is MIT Licensed  
+Opauth-GitHub is MIT Licensed
 Copyright © 2012 U-Zyn Chua (http://uzyn.com)
 
 [1]: https://github.com/uzyn/opauth
