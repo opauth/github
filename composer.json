@@ -20,7 +20,7 @@
 		"opauth/opauth": "dev-wip/1.0"
 	},
 	"autoload": {
-		"psr-0": { "Opauth\\Strategy\\Github": "" }
+		"psr-0": { "Opauth\\Strategy\\GitHub": "" }
 	},
-	"target-dir": "Opauth/Strategy/Github"
+	"target-dir": "Opauth/Strategy/GitHub"
 }

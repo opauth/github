@@ -10,7 +10,7 @@
  * @license      MIT License
  */
 
-namespace Opauth\Strategy\Github;
+namespace Opauth\Strategy\GitHub;
 
 use Opauth\AbstractStrategy;
 
