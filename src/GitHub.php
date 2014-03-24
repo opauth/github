@@ -10,16 +10,16 @@
  * @license      MIT License
  */
 
-namespace Opauth\Strategy\GitHub;
+namespace Opauth\GitHub\Strategy;
 
-use Opauth\AbstractStrategy;
+use Opauth\Opauth\AbstractStrategy;
 
 /**
  * GitHub strategy for Opauth
  *
  * @package			Opauth.GitHub
  */
-class Strategy extends AbstractStrategy {
+class GitHub extends AbstractStrategy {
 
 	/**
 	 * Compulsory config keys, listed as unassociative arrays

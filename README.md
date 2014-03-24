@@ -12,8 +12,8 @@ Getting started
 ----------------
 1. Install Opauth-GitHub:
    ```bash
-   cd path_to_opauth/Strategy
-   git clone git://github.com/uzyn/opauth-github.git GitHub
+   cd path/to/app/root
+   composer require opauth/github:dev-wip/1.0
    ```
 
 2. Register a GitHub application at https://github.com/settings/applications/new
