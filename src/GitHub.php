@@ -109,5 +109,4 @@ class GitHub extends AbstractStrategy
 
         return $this->http->post($url, $params);
     }
-
 }
