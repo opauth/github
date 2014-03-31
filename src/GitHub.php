@@ -73,25 +73,22 @@ class GitHub extends AbstractStrategy
         $response = $this->accessToken($_GET['code']);
         parse_str($response, $results);
         if (empty($results['access_token'])) {
-            $error = array(
-                'code' => 'access_token_error',
-                'message' => 'Failed when attempting to obtain access token',
+            return $this->error(
+                'Failed when attempting to obtain access token',
+                'access_token_error',
+                $response
             );
-            return $this->response($response, $error);
         }
 
         $data = array('access_token' => $results['access_token']);
         $user = $this->http->get('https://api.github.com/user', $data);
         $user = $this->recursiveGetObjectVars(json_decode($user));
         if (empty($user) || isset($user['message'])) {
-            $error = array(
-                'code' => 'userinfo_error',
-                'message' => 'Failed when attempting to query GitHub v3 API for user information'
-            );
+            $message = 'Failed when attempting to query GitHub v3 API for user information';
             if (isset($user['message'])) {
-                $error['message'] = $user['message'];
+                $message = $user['message'];
             }
-            return $this->response($user, $error);
+            return $this->error($message, 'userinfo_error', $user);
         }
 
         $response = $this->response($user);
