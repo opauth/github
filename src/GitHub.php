@@ -58,7 +58,7 @@ class GitHub extends AbstractStrategy
         );
         $params = $this->addParams($this->optionals, $params);
 
-        $this->http->redirect($url, $params);
+        $this->redirect($url, $params);
     }
 
     /**
