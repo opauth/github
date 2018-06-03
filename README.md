@@ -15,6 +15,10 @@ Getting started
    cd path_to_opauth/Strategy
    git clone git://github.com/opauth/github.git GitHub
    ```
+   or
+   ```bash
+   composer require opauth/github
+   ```
 
 2. Register a GitHub application at https://github.com/settings/applications/new
    - Enter URL as your application URL (this can be outside of Opauth)
